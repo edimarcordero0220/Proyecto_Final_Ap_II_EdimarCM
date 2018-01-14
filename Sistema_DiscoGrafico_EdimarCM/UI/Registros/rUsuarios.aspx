@@ -51,15 +51,15 @@
              <asp:Label ID="Label1" runat="server" Text="Nombre"></asp:Label>
           <asp:TextBox ID="NombreTextBox" class="form-control"  placeholder="Nombre" runat="server"></asp:TextBox>
               <asp:Label ID="Label8" runat="server" Text="Clave"></asp:Label>
-          <asp:TextBox class="auto-style1" ID="ClaveTextBox" placeholder="Clave" runat="server"></asp:TextBox>
+          <asp:TextBox class="auto-style1" ID="ClaveTextBox" placeholder="Clave" runat="server" TextMode="Password"></asp:TextBox>
              <asp:Label ID="Label3" runat="server" Text="Fecha"></asp:Label>
           <asp:TextBox ID="FechaTextBox" class="form-control" runat="server"></asp:TextBox>
              <asp:Label ID="Label4" runat="server" Text="Email"></asp:Label>
-          <asp:TextBox ID="EmailTextBox"  class="form-control" placeholder="Email" runat="server"></asp:TextBox>
+          <asp:TextBox ID="EmailTextBox"  class="form-control" placeholder="Email" runat="server" TextMode="Email"></asp:TextBox>
              <asp:Label ID="Label5" runat="server" Text="Direccion"></asp:Label>
           <asp:TextBox ID="DireccionTextBox" class="form-control" placeholder="Direccion" runat="server"></asp:TextBox>
              <asp:Label ID="Label6" runat="server" Text="Telefono"></asp:Label>
-          <asp:TextBox ID="TelefonoTextBox" class="form-control"  placeholder="Telefono" runat="server"></asp:TextBox>
+          <asp:TextBox ID="TelefonoTextBox" class="form-control"  placeholder="Telefono" runat="server" TextMode="Phone"></asp:TextBox>
              <asp:Label ID="Label7" runat="server" Text="Celular"></asp:Label>
           <asp:TextBox ID="CelularTextBox" class="form-control"   placeholder="Celular" runat="server"></asp:TextBox>
       </div>
@@ -72,10 +72,10 @@
       <div class="col-lg-9 col-lg-offset-1">
           
           <br></br>
-          <asp:Button ID="GuardarButton" class="btn btn-sumit" runat="server" OnClick="GuardarButton_Click" Text="Guardar" />
-        <asp:Button ID="BuscarButton" class="btn btn-default" runat="server" Text="Buscar" OnClick="BuscarButton_Click" />
-        <asp:Button ID="EliminarButton" class="btn btn-cancel" runat="server" Text="Eliminar" OnClick="EliminarButton_Click" />
-         <asp:Button ID="NuevoButton" class="btn btn-cancel" runat="server" Text="Nuevo" OnClick="NuevoButton_Click" />
+          <asp:Button ID="GuardarButton" class="btn btn-success" runat="server" OnClick="GuardarButton_Click" Text="Guardar" />
+        <asp:Button ID="BuscarButton" class="btn btn-info" runat="server" Text="Buscar" OnClick="BuscarButton_Click" />
+        <asp:Button ID="EliminarButton" class="btn btn-danger" runat="server" Text="Eliminar" OnClick="EliminarButton_Click" />
+         <asp:Button ID="NuevoButton" class="btn btn-secondary" runat="server" Text="Nuevo" OnClick="NuevoButton_Click" />
 
           <br></br>
           <br></br>

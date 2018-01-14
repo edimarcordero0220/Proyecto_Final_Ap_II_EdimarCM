@@ -42,6 +42,7 @@ namespace Sistema_DiscoGrafico_EdimarCM.UI.Registros
                 Entidades.Usuarios usu = new Entidades.Usuarios();
                 LlenarClase(usu);
                 UsuariosBLL.Insertar(usu);
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "scripts", "<script>alert('Proceso Completado');</script>");
                 Limpiar();
             }
         }

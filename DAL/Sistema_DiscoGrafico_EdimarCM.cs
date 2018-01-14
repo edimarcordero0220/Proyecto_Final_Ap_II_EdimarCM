@@ -10,9 +10,9 @@ using Entidades;
 
 namespace DAL
 {
-    public class SistemaDb: DbContext
+    public class Sistema_DiscoGrafico_EdimarCM: DbContext
     {
-        public SistemaDb() : base("name = ConStr")
+        public Sistema_DiscoGrafico_EdimarCM() : base("name = ConStr")
         {
                 
         }

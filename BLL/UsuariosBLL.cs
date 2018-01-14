@@ -14,7 +14,7 @@ namespace BLL
         {
             try
             {
-                SistemaDb db = new SistemaDb();
+                Sistema_DiscoGrafico_EdimarCM db = new Sistema_DiscoGrafico_EdimarCM();
                 db.usuario.Add(u);
                 db.SaveChanges();
                 db.Dispose();
@@ -30,7 +30,7 @@ namespace BLL
         public static List<Usuarios> GetLista()
         {
             List<Usuarios> lista = new List<Usuarios>();
-            SistemaDb db = new SistemaDb();
+            Sistema_DiscoGrafico_EdimarCM db = new Sistema_DiscoGrafico_EdimarCM();
             lista = db.usuario.ToList();
             return lista;
 
@@ -38,7 +38,7 @@ namespace BLL
 
         public static void Eliminar(int v)
         {
-            SistemaDb db = new SistemaDb();
+            Sistema_DiscoGrafico_EdimarCM db = new Sistema_DiscoGrafico_EdimarCM();
             Usuarios cl = db.usuario.Find(v);
 
             db.usuario.Remove(cl);
@@ -46,13 +46,13 @@ namespace BLL
         }
         public static Usuarios Buscar(int Id)
         {
-            SistemaDb db = new SistemaDb();
+            Sistema_DiscoGrafico_EdimarCM db = new Sistema_DiscoGrafico_EdimarCM();
             return db.usuario.Find(Id);
         }
         public static List<Usuarios> GetListaNombre(string tmp)
         {
             List<Usuarios> lista = new List<Usuarios>();
-            SistemaDb db = new SistemaDb();
+            Sistema_DiscoGrafico_EdimarCM db = new Sistema_DiscoGrafico_EdimarCM();
             lista = db.usuario.Where(p => p.Nombre == tmp).ToList();
             return lista;
         }
@@ -60,11 +60,18 @@ namespace BLL
         public static List<Usuarios> GetId(int usuarioid)
         {
             List<Usuarios> lista = new List<Usuarios>();
-            SistemaDb db = new SistemaDb();
+            Sistema_DiscoGrafico_EdimarCM db = new Sistema_DiscoGrafico_EdimarCM();
             lista = db.usuario.Where(p => p.UsuarioId == usuarioid).ToList();
             return lista;
         }
-       
+        public static List<Usuarios> GetContrasena(string tmp)
+        {
+            List<Usuarios> lista = new List<Usuarios>();
+            Sistema_DiscoGrafico_EdimarCM db = new Sistema_DiscoGrafico_EdimarCM();
+            lista = db.usuario.Where(p => p.Clave == tmp).ToList();
+            return lista;
+        }
+
 
     }
 }
